@@ -1,0 +1,17 @@
+{
+  "name": "Savvy",
+  "short_name": "Savvy",
+  "icons": [
+        {
+            "src": "images/ic.png",
+            "sizes": "320x320",
+            "type": "image/png"
+        }
+  ],
+  "scope": "savvy",
+  "start_url": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color"  : "#ff9800",
+  "background_color": "#ffffff"
+}

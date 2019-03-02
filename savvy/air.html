@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <title>莎薇 心動好透氣</title>
+    <meta name="description" content="春夏涼爽新體驗，打洞透氣 ELK 棉搭配冰涼紗材質。集中不悶熱，多色選擇美背設計，讓妳呈現不同風貌。">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, user-scalable=yes">
+    <meta property="og:url" content="http://event.wacoal.com.tw/EDM/Project3/2019SS-SV-03/air.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="zh_tw">
+    <meta property="og:ttl" content="345600">
+    <meta property="og:image" content="http://event.wacoal.com.tw/EDM/Project3/2019SS-SV-03/images/og_image.png">
+    <meta property="twitter:image" content="http://event.wacoal.com.tw/EDM/Project3/2019SS-SV-03/images/og_image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:title" content="莎薇 心動好透氣">
+    <meta property="twitter:title" content="莎薇 心動好透氣">
+    <meta property="og:description" content="春夏涼爽新體驗，打洞透氣 ELK 棉搭配冰涼紗材質。集中不悶熱，多色選擇美背設計，讓妳呈現不同風貌。">
+    <meta property="twitter:card" content="春夏涼爽新體驗，打洞透氣 ELK 棉搭配冰涼紗材質。集中不悶熱，多色選擇美背設計，讓妳呈現不同風貌。">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style type="text/css">
+      @media (min-width: 10px) {
+          body #row2-bg {
+              height: 432px;
+          }
+      }
+      @media (min-width: 720px) {
+          body #row2-bg {
+              height: 864px;
+          }
+      }
+      
+      body {
+          background-color: #ecffff;
+      }
+      
+      body #row2-bg {
+          top: 10%;
+          width: 100%;
+          position: absolute;
+      }
+      body #row2-canvas1 {
+          width: 100%;
+          animation: animBubble 5s linear infinite;
+      }
+      
+      body #row2-canvas2 {
+          width: 100%;
+          animation: animBubble 11s linear infinite;
+      }
+      
+      #text1 {
+          animation: animScale 3s linear infinite;
+      }
+      #text2 {
+          animation: animScale 3s linear infinite;
+      }
+      
+      
+      @keyframes animScale {
+          0% {
+              transform: scale(1.0);
+          }
+          50% {
+              transform: scale(1.05);
+          }
+          100% {
+              transform: scale(1.0);
+          }
+      }
+      
+      
+    </style>
+  </head>
+  <body>
+    <header id="top-bar">
+      <div class="container">
+        <div class="row top-bar">
+          <div class="col-xs-2 col-md-1"><a class="home" href="./"><img class="fit_width" src="images/top_bar/top_bar_home.png"></a></div>
+          <div class="col-xs-8 col-md-10"><a href="./"><img class="center-block logo" src="images/top_bar/top_bar_logo.png"></a></div>
+          <div class="col-xs-2 col-md-1"><a id="open-menu" href="javascript:void(0)"><img class="fit_width" id="menu-toggler" src="images/top_bar/top_bar_menu.png"></a>
+            <div class="floating-menu toggleable" id="floating-menu">
+              <nav>
+                <ul>
+                  <li><a href="./">
+                      <div class="item">首頁</div></a></li>
+                  <li><a href="./air.html">
+                      <div class="item">好透氣</div></a></li>
+                  <li><a href="./girl.html">
+                      <div class="item">無鋼圈系列</div></a></li>
+                  <li><a href="./lanzi.html">
+                      <div class="item">美背百搭單品</div></a></li>
+                  <li><a href="./pink.html">
+                      <div class="item">輕粉水</div></a></li>
+                  <li><a href="./purple.html">
+                      <div class="item">好素配</div></a></li>
+                  <li><a href="./water.html">
+                      <div class="item">魔力推推</div></a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="floating-menu-bg toggleable" id="menu-bg"></div>
+      <script>
+        (function() {
+            var header = document.getElementById('top-bar');
+            var btnOpen = document.getElementById('open-menu');
+            var img = document.getElementById('menu-toggler');
+            var actived = false;
+        
+            var toggleFn = function() {
+                actived = !actived;
+                Array.from(header.getElementsByClassName('toggleable'))
+                    .forEach(function(dom) {
+                        if (actived) {
+                            dom.classList.add('actived');
+                        } else {
+                            dom.classList.remove('actived');
+                        }
+                    });
+        
+                img.src = actived
+                    ? 'images/top_bar/top_bar_close.png'
+                    : 'images/top_bar/top_bar_menu.png';
+            };
+        
+            btnOpen.addEventListener('click', toggleFn);
+            document.getElementById('floating-menu').addEventListener('click', toggleFn);
+        })();
+      </script>
+    </header>
+    <div class="container main-container">
+      <!-- row 1-->
+      <div class="row">
+        <div class="col-md-12"><img class="widgets" id="text1" src="./images/air/air_text_01.png" style="width: 32%; top: 60%; left: 64%;"><img class="widgets" id="text2" src="./images/air/air_text_02.png" style="width: 18%; top: 33%; left: 13%;"><img class="rowbg" src="./images/bg/air_bg_01.jpg"></div>
+      </div>
+      <!-- row 2-->
+      <div class="row">
+        <div class="col-md-12">
+          <div id="row2-bg"></div>
+          <iframe class="youtube_video" id="video" style="top: 34%; left: 10%;" src="https://www.youtube.com/embed/Af9Sod6cZX0?controls=1&amp;rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><img class="rowbg" src="./images/bg/air_bg_02.png">
+        </div>
+      </div>
+      <!-- row 3-->
+      <div class="row">
+        <div class="col-md-12"><img class="rowbg" src="./images/bg/air_bg_03.jpg"></div>
+      </div>
+      <!-- row 4-->
+      <div class="row">
+        <div class="col-md-12"><img class="rowbg" src="./images/bg/air_bg_04.jpg"></div>
+      </div>
+      <!-- row 5-->
+      <div class="row">
+        <div class="col-md-12"><img class="rowbg" src="./images/bg/air_bg_05.jpg"></div>
+      </div>
+      <!-- row a6-->
+      <div class="row">
+        <div class="col-md-12"><img class="rowbg" src="./images/bg/air_bg_06.gif"></div>
+      </div>
+      <!-- row 7-->
+      <div class="row">
+        <div class="col-md-12"><img class="rowbg" src="./images/bg/air_bg_07.gif"></div>
+      </div>
+      <!-- row8-->
+      <div class="row">
+        <div class="col-md-12"><img class="rowbg" src="./images/bg/air_bg_08.gif"></div>
+      </div>
+      <!-- row 9-->
+      <div class="row">
+        <div class="col-md-12"><img class="rowbg" src="./images/bg/air_bg_09.gif"></div>
+      </div>
+      <!-- row 10-->
+      <div class="row">
+        <div class="col-md-12"><img class="rowbg" src="./images/bg/air_bg_10.jpg"></div>
+      </div>
+      <!-- row 11-->
+      <div class="row">
+        <div class="col-md-12">
+              <table class="control widgets row-table" id="row11-table" style="margin: 22% 0 0 6%">
+                <tr class="row-main">
+                  <td class="arrow">
+                    <div class="clickable arrow-button arrow-left"></div>
+                  </td>
+                  <td>
+                    <div class="control-result-container"><img class="control-display" src="./images/air/ab4562_ge.png"></div>
+                  </td>
+                  <td class="arrow">
+                    <div class="clickable arrow-button arrow-right"></div>
+                  </td>
+                </tr>
+                <tr class="row-description">
+                  <td colspan="3">
+                    <div class="product-number">AB4562</div>
+                    <div class="size-list">
+                      <div class="size">BC 70-85 $1580</div>
+                      <div class="size">D-F 70-90 $1680</div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="row-circles">
+                  <td class="circles-container" colspan="3"><span class="clickable circle-icon">
+                      <div><img class="thumbnail" src="./images/air/ab4562_ge_thumb.png"></div>
+                      <div class="hint">GE</div>
+                      <div class="hint">飛揚綠</div></span><span class="clickable circle-icon">
+                      <div><img class="thumbnail" src="./images/air/ab4562_bl_thumb.png"></div>
+                      <div class="hint">BL</div>
+                      <div class="hint">綺麗黑</div></span><span class="clickable circle-icon">
+                      <div><img class="thumbnail" src="./images/air/ab4562_ls_thumb.png"></div>
+                      <div class="hint">LS</div>
+                      <div class="hint">神采橘</div></span>
+                  </td>
+                </tr>
+              </table>
+              <table class="control widgets row-table" id="row11-table2" style="margin: 114% 0 0 6%">
+                <tr class="row-main">
+                  <td class="arrow">
+                    <div class="clickable arrow-button arrow-left"></div>
+                  </td>
+                  <td>
+                    <div class="control-result-container"><img class="control-display" src="./images/air/as2362_ge.png" style="width: 70%;"></div>
+                  </td>
+                  <td class="arrow">
+                    <div class="clickable arrow-button arrow-right"></div>
+                  </td>
+                </tr>
+                <tr class="row-description">
+                  <td colspan="3">
+                    <div class="product-number">AS2362</div>
+                    <div class="size-list">
+                      <div class="size">M-LL $420</div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="row-circles">
+                  <td class="circles-container" colspan="3"><span class="clickable circle-icon">
+                      <div><img class="thumbnail" src="./images/air/ab4562_ge_thumb.png"></div>
+                      <div class="hint">GE</div>
+                      <div class="hint">飛揚綠</div></span><span class="clickable circle-icon">
+                      <div><img class="thumbnail" src="./images/air/ab4562_bl_thumb.png"></div>
+                      <div class="hint">BL</div>
+                      <div class="hint">綺麗黑</div></span><span class="clickable circle-icon">
+                      <div><img class="thumbnail" src="./images/air/ab4562_ls_thumb.png"></div>
+                      <div class="hint">LS</div>
+                      <div class="hint">神采橘</div></span>
+                  </td>
+                </tr>
+              </table><img class="rowbg" src="./images/bg/air_bg_11.jpg">
+        </div>
+      </div>
+    </div>
+    <footer id="foot-bar">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12"><span class="rest">
+              <div class="fb-share-button" data-href="http://event.wacoal.com.tw/EDM/Project3/2019SS-SV-03/" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fevent.wacoal.com.tw%2FEDM%2FProject3%2F2019SS-SV-03%2F&amp;amp;src=sdkpreparse">分享</a></div></span></div>
+        </div>
+      </div>
+      <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v3.1';
+            fjs.parentNode.insertBefore(js, fjs);
+        })(document, 'script', 'facebook-jssdk');
+      </script>
+    </footer>
+    <script src="js/control.js"></script>
+    <script src="js/bubbles.js"></script>
+    <script>
+      WearControl.initTableById('row11-table', [
+          "./images/air/ab4562_ge.png",
+          "./images/air/ab4562_bl.png",
+          "./images/air/ab4562_ls.png"
+      ]);
+      
+      WearControl.initTableById('row11-table2', [
+          "./images/air/as2362_ge.png",
+          "./images/air/as2362_bl.png",
+          "./images/air/as2362_ls.png",
+          "./images/air/as2462_ge.png",
+          "./images/air/as2462_bl.png",
+          "./images/air/as2462_ls.png",
+          "./images/air/as3462_ge.png",
+          "./images/air/as3462_bl.png",
+          "./images/air/as3462_ls.png"
+      ], {
+          'as2462': 'M-LL $480',
+          'as3462': 'F $480'
+      });
+      
+      var bg1 = document.getElementById('row2-bg');
+      drawBubbles(bg1, 'row2-canvas1', {
+          density: 0.4,
+          minRadius: 5,
+          maxRadius: 20,
+          styles:[
+              'rgba(255, 0, 0, 0.1)',
+              'rgba(231, 204, 34, 0.3)',
+              'rgba(64, 196, 213, 0.2)'
+          ]
+      });
+      drawBubbles(bg1, 'row2-canvas2', {
+          density: 0.5,
+          minRadius: 5,
+          maxRadius: 20,
+          styles: [
+              'rgba(255, 0, 0, 0.1)',
+              'rgba(231, 204, 34, 0.3)',
+              'rgba(64, 196, 213, 0.2)'
+          ]
+      });
+    </script>
+  </body>
+</html>
