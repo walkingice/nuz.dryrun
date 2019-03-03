@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <title></title>
+    <meta name="description">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, user-scalable=yes">
+    <meta property="og:url" content="http://nuz.dryrun.dev/sample/detail.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="zh_tw">
+    <meta property="og:ttl" content="345600">
+    <meta property="og:image" content="http://nuz.dryrun.dev/sample/images/og_image.png">
+    <meta property="twitter:image" content="http://nuz.dryrun.dev/sample/images/og_image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:title" content="shareTitle">
+    <meta property="twitter:title" content="shareTitle">
+    <meta property="og:description" content="share description">
+    <meta property="twitter:card" content="share description">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="/sample/manifest.json">
+    <link rel="apple-touch-icon" href="/sample/images/manifest/ic_ios.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="${__APP_NAME__}">
+    <style type="text/css">
+      body {
+      }
+      @media (min-width: 10px) {
+      }
+      @media (min-width: 720px) {
+      }
+    </style>
+  </head>
+  <body>
+    <header id="top-bar">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12"><a href="./"><img class="logo" src="images/top_bar/top_bar_logo.png"></a><span class="rest"><a class="home" href="./"><img src="images/top_bar/top_bar_home.png"></a><a id="open-menu" href="javascript:void(0)"><img id="menu-toggler" src="images/top_bar/top_bar_menu.png"></a></span>
+            <div class="floating-menu toggleable" id="floating-menu">
+              <nav>
+                <ul>
+                  <li><a href="./">
+                      <div class="item">首頁</div></a></li>
+                  <li><a href="./detail.html">
+                      <div class="item">更多</div></a></li>
+                  <li><a href="./story.html#address">
+                      <div class="item"><span><span>據點資訊</span>
+                          <div class="caption">bar</div></span></div></a></li>
+                  <li><a href="./setup.html">
+                      <div class="item">設定</div></a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="floating-menu-bg toggleable" id="menu-bg"></div>
+      <script>
+        (function() {
+            var header = document.getElementById('top-bar');
+            var btnOpen = document.getElementById('open-menu');
+            var img = document.getElementById('menu-toggler');
+            var actived = false;
+        
+            var toggleFn = function() {
+                actived = !actived;
+                Array.from(header.getElementsByClassName('toggleable'))
+                    .forEach(function(dom) {
+                        if (actived) {
+                            dom.classList.add('actived');
+                        } else {
+                            dom.classList.remove('actived');
+                        }
+                    });
+        
+                img.src = actived
+                    ? 'images/top_bar/top_bar_close.png'
+                    : 'images/top_bar/top_bar_menu.png';
+            };
+        
+            btnOpen.addEventListener('click', toggleFn);
+            document.getElementById('floating-menu').addEventListener('click', toggleFn);
+        })();
+      </script>
+    </header>
+    <div class="container main-container">
+      <!-- row 1-->
+      <div class="row"><span class="anchor" id="jumping"></span>
+        <div class="col-md-12"><img class="rowbg" src="./images/bg/detail_bg_01.jpg"></div>
+      </div>
+      <!-- row 2-->
+      <div class="row">
+        <div class="col-md-12">
+              <table class="control widgets row-table" id="row2-table" style="left: 10%; top:2%;  color: black;">
+                <tr class="row-main">
+                  <td class="arrow">
+                    <div class="clickable arrow-button arrow-left"></div>
+                  </td>
+                  <td>
+                    <div class="control-result-container"><img class="control-display testImgClass" src="./images/detail/ss0001_gr.png" style="width: 100%"></div>
+                  </td>
+                  <td class="arrow">
+                    <div class="clickable arrow-button arrow-right"></div>
+                  </td>
+                </tr>
+                <tr class="row-description">
+                  <td colspan="3">
+                    <div class="product-number">SS0001</div>
+                    <div class="size-list">
+                      <div class="size">B 70-80 $1580</div>
+                      <div class="size">C 70-85 $1580</div>
+                      <div class="size">DE 70-85 $1680</div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="row-circles">
+                  <td class="circles-container" colspan="3"><span class="clickable circle-icon">
+                      <div><img class="thumbnail" src="./images/detail/ss0001_gr_thumb.png"></div>
+                      <div class="hint">gr</div>
+                      <div class="hint">測試綠</div></span><span class="clickable circle-icon">
+                      <div><img class="thumbnail" src="./images/detail/ss0001_pr_thumb.png"></div>
+                      <div class="hint">pr</div>
+                      <div class="hint">測試紫</div></span><span class="clickable circle-icon">
+                      <div><img class="thumbnail" src="./images/detail/ss0001_bl_thumb.png"></div>
+                      <div class="hint">bl</div>
+                      <div class="hint">測試藍</div></span>
+                  </td>
+                </tr>
+              </table><img class="rowbg" src="./images/bg/detail_bg_02.jpg">
+        </div>
+        <!-- row 3-->
+      </div>
+      <div class="row">
+        <div class="col-md-12"><span class="anchor" id="jumping"></span><img class="rowbg" src="./images/bg/detail_bg_03.jpg"></div>
+      </div>
+    </div>
+    <footer id="foot-bar">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12"><span class="rest">
+              <div class="fb-share-button" data-href="http://nuz.dryrun.dev/sample" data-layout="button" data-size="large" data-mobile-iframe="false"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fnuz.dryrun.dev%2Fsample&amp;src=sdkpreparse">分享</a></div></span></div>
+        </div>
+      </div>
+      <div id="fb-root"></div>
+      <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v3.2';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+      </script>
+    </footer>
+    <script src="js/control.js"></script>
+    <script>
+      WearControl.initTableById('row2-table', [
+          "./images/detail/ss0001_gr.png",
+          "./images/detail/ss0001_pr.png",
+          "./images/detail/ss0001_bl.png",
+          "./images/detail/ss0002_gr.png",
+          "./images/detail/ss0002_pr.png",
+          "./images/detail/ss0002_bl.png"
+      ], {
+          'ss0002': 'ss0002 set 2 size'
+      });
+    </script>
+  </body>
+</html>

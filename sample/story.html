@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <title>Store</title>
+    <meta name="description" content="Store page">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, user-scalable=yes">
+    <meta property="og:url" content="http://nuz.dryrun.dev/sample/story.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="zh_tw">
+    <meta property="og:ttl" content="345600">
+    <meta property="og:image" content="http://nuz.dryrun.dev/sample/images/og_image.png">
+    <meta property="twitter:image" content="http://nuz.dryrun.dev/sample/images/og_image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:title" content="shareTitle">
+    <meta property="twitter:title" content="shareTitle">
+    <meta property="og:description" content="share description">
+    <meta property="twitter:card" content="share description">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="/sample/manifest.json">
+    <link rel="apple-touch-icon" href="/sample/images/manifest/ic_ios.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="${__APP_NAME__}">
+    <style type="text/css">
+      body {
+      }
+      @media (min-width: 10px) {
+      }
+      @media (min-width: 720px) {
+      }
+    </style>
+  </head>
+  <body class="story">
+    <header id="top-bar">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12"><a href="./"><img class="logo" src="images/top_bar/top_bar_logo.png"></a><span class="rest"><a class="home" href="./"><img src="images/top_bar/top_bar_home.png"></a><a id="open-menu" href="javascript:void(0)"><img id="menu-toggler" src="images/top_bar/top_bar_menu.png"></a></span>
+            <div class="floating-menu toggleable" id="floating-menu">
+              <nav>
+                <ul>
+                  <li><a href="./">
+                      <div class="item">首頁</div></a></li>
+                  <li><a href="./detail.html">
+                      <div class="item">更多</div></a></li>
+                  <li><a href="./story.html#address">
+                      <div class="item"><span><span>據點資訊</span>
+                          <div class="caption">bar</div></span></div></a></li>
+                  <li><a href="./setup.html">
+                      <div class="item">設定</div></a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="floating-menu-bg toggleable" id="menu-bg"></div>
+      <script>
+        (function() {
+            var header = document.getElementById('top-bar');
+            var btnOpen = document.getElementById('open-menu');
+            var img = document.getElementById('menu-toggler');
+            var actived = false;
+        
+            var toggleFn = function() {
+                actived = !actived;
+                Array.from(header.getElementsByClassName('toggleable'))
+                    .forEach(function(dom) {
+                        if (actived) {
+                            dom.classList.add('actived');
+                        } else {
+                            dom.classList.remove('actived');
+                        }
+                    });
+        
+                img.src = actived
+                    ? 'images/top_bar/top_bar_close.png'
+                    : 'images/top_bar/top_bar_menu.png';
+            };
+        
+            btnOpen.addEventListener('click', toggleFn);
+            document.getElementById('floating-menu').addEventListener('click', toggleFn);
+        })();
+      </script>
+    </header>
+    <div class="container main-container">
+      <!-- row 1-->
+      <div class="row">
+        <div class="col-md-12" id="intro">
+          <div class="description"><img class="logo" src="images/top_bar/top_bar_logo.png" style="margin-left: -10px;">
+            <p>
+              <h4>品牌故事</h4>
+              <div>Une nana cool 為法語</div>
+              <div>意指「有型的女孩」</div>
+              <div>以鮮豔的顏色搭配，舒適剪裁</div>
+              <div>結合貼片等飾品走出不同休閒定位，</div>
+              <div>以傳達生意盎然、活躍等活潑青春動力。</div>
+              <div>獻給都會中追求獨特、與眾不同的個性女孩</div>
+            </p>
+            <p>
+              <div>我們希望</div>
+              <div>「穿上內衣的心情可以像穿外衣一樣」的概念</div>
+              <div>可以傳遞給每一位女性顧客，利用簡單也</div>
+              <div>自在瀟灑的系列</div>
+              <div>繼續為女孩們生活應援</div>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- row 2-->
+      <div class="row">
+        <div class="col-md-12"><span class="anchor" id="address"></span><img class="rowbg" src="./images/bg/story_bg_01_03.jpg"></div>
+      </div>
+      <!-- row address-->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="address-list">
+            <div>台北</div>
+            <ul>
+                  <li class="store">
+                    <div>
+                      <div class="btns"><a href="#{obj.fb}" target="_blank"><img class="btn fb" src="./images/comp/btn_fb.png"></a><a href="#{obj.line}" target="_blank"><img class="btn" src="./images/comp/btn_line.png"></a>
+                      </div>
+                      <div class="content">
+                        <div class="title">SOGO 復興館</div>
+                        <div class="phone">02-87723217</div>
+                        <div class="address">台北市忠孝東路三段 300 號 5 樓</div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="store">
+                    <div>
+                      <div class="btns"><a href="#{obj.fb}" target="_blank"><img class="btn fb" src="./images/comp/btn_fb.png"></a><a href="#{obj.line}" target="_blank"><img class="btn" src="./images/comp/btn_line.png"></a>
+                      </div>
+                      <div class="content">
+                        <div class="title">京站百貨</div>
+                        <div class="phone">02-25522617</div>
+                        <div class="address">台北市大同區承德路一段 1 號 B1</div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="store">
+                    <div>
+                      <div class="btns"><a href="#{obj.fb}" target="_blank"><img class="btn fb" src="./images/comp/btn_fb.png"></a><a href="#{obj.line}" target="_blank"><img class="btn" src="./images/comp/btn_line.png"></a>
+                      </div>
+                      <div class="content">
+                        <div class="title">SOGO 天母館</div>
+                        <div class="phone">02-28352207</div>
+                        <div class="address">台北市士林區中山北路六段 77 號 2 樓</div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="store">
+                    <div>
+                      <div class="btns"><a href="#{obj.fb}" target="_blank"><img class="btn fb" src="./images/comp/btn_fb.png"></a><a href="#{obj.line}" target="_blank"><img class="btn" src="./images/comp/btn_line.png"></a>
+                      </div>
+                      <div class="content">
+                        <div class="title">統一時代百貨台北店</div>
+                        <div class="phone">02-27228869</div>
+                        <div class="address">台北市信義區忠孝東路五段 8 號 3 樓</div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="store">
+                    <div>
+                      <div class="btns"><a href="#{obj.fb}" target="_blank"><img class="btn fb" src="./images/comp/btn_fb.png"></a><a href="#{obj.line}" target="_blank"><img class="btn" src="./images/comp/btn_line.png"></a>
+                      </div>
+                      <div class="content">
+                        <div class="title">新光 A11</div>
+                        <div class="phone">02-02-87861103</div>
+                        <div class="address">台北市信義區松壽路 11 號 B1</div>
+                      </div>
+                    </div>
+                  </li>
+            </ul>
+          </div>
+          <div class="address-list">
+            <div>新北</div>
+            <ul>
+                  <li class="store">
+                    <div>
+                      <div class="btns"><a href="#{obj.fb}" target="_blank"><img class="btn fb" src="./images/comp/btn_fb.png"></a><a href="#{obj.line}" target="_blank"><img class="btn" src="./images/comp/btn_line.png"></a>
+                      </div>
+                      <div class="content">
+                        <div class="title">板橋大遠百</div>
+                        <div class="phone">02-29543299</div>
+                        <div class="address">新北市板橋區新站路 28 號 4 樓</div>
+                      </div>
+                    </div>
+                  </li>
+            </ul>
+          </div>
+          <div class="address-list">
+            <div>新竹</div>
+            <ul>
+                  <li class="store">
+                    <div>
+                      <div class="btns"><a href="#{obj.fb}" target="_blank"><img class="btn fb" src="./images/comp/btn_fb.png"></a><a href="#{obj.line}" target="_blank"><img class="btn" src="./images/comp/btn_line.png"></a>
+                      </div>
+                      <div class="content">
+                        <div class="title">遠東百貨</div>
+                        <div class="phone">03-5277950</div>
+                        <div class="address">新竹市西大路 323 號 4 樓</div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="store">
+                    <div>
+                      <div class="btns"><a href="#{obj.fb}" target="_blank"><img class="btn fb" src="./images/comp/btn_fb.png"></a><a href="#{obj.line}" target="_blank"><img class="btn" src="./images/comp/btn_line.png"></a>
+                      </div>
+                      <div class="content">
+                        <div class="title">新竹巨城 BIG CITY</div>
+                        <div class="phone">03-6238309</div>
+                        <div class="address">新竹市中央路229號3樓</div>
+                      </div>
+                    </div>
+                  </li>
+            </ul>
+          </div>
+          <div class="address-list">
+            <div>台南</div>
+            <ul>
+                  <li class="store">
+                    <div>
+                      <div class="btns"><a href="#{obj.fb}" target="_blank"><img class="btn fb" src="./images/comp/btn_fb.png"></a><a href="#{obj.line}" target="_blank"><img class="btn" src="./images/comp/btn_line.png"></a>
+                      </div>
+                      <div class="content">
+                        <div class="title">南紡夢時代</div>
+                        <div class="phone">06-2081385</div>
+                        <div class="address">台南市東區中華東路一段 366 號 2 樓</div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="store">
+                    <div>
+                      <div class="btns"><a href="#{obj.fb}" target="_blank"><img class="btn fb" src="./images/comp/btn_fb.png"></a><a href="#{obj.line}" target="_blank"><img class="btn" src="./images/comp/btn_line.png"></a>
+                      </div>
+                      <div class="content">
+                        <div class="title">新光西門店 </div>
+                        <div class="phone">06-3031500</div>
+                        <div class="address">台南市中西區西門路一段 658 號 4 樓</div>
+                      </div>
+                    </div>
+                  </li>
+            </ul>
+          </div>
+          <div class="address-list">
+            <div>高雄</div>
+            <ul>
+                  <li class="store">
+                    <div>
+                      <div class="btns"><a href="#{obj.line}" target="_blank"><img class="btn" src="./images/comp/btn_line.png"></a>
+                      </div>
+                      <div class="content">
+                        <div class="title">漢神巨蛋 </div>
+                        <div class="phone">07-5225808</div>
+                        <div class="address">高雄市左營區博愛二路 777 號 4 樓</div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="store">
+                    <div>
+                      <div class="btns"><a href="#{obj.line}" target="_blank"><img class="btn" src="./images/comp/btn_line.png"></a>
+                      </div>
+                      <div class="content">
+                        <div class="title">統一時代百貨高雄店 </div>
+                        <div class="phone">07-8213065</div>
+                        <div class="address">高雄市前鎮區中華五路 789 號 B1</div>
+                      </div>
+                    </div>
+                  </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer id="foot-bar">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12"><span class="rest">
+              <div class="fb-share-button" data-href="http://nuz.dryrun.dev/sample" data-layout="button" data-size="large" data-mobile-iframe="false"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fnuz.dryrun.dev%2Fsample&amp;src=sdkpreparse">分享</a></div></span></div>
+        </div>
+      </div>
+      <div id="fb-root"></div>
+      <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v3.2';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+      </script>
+    </footer>
+    <script src="js/control.js"></script>
+  </body>
+</html>

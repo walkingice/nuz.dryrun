@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <title></title>
+    <meta name="description">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, user-scalable=yes">
+    <meta property="og:url" content="http://nuz.dryrun.dev/sample/setup.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="zh_tw">
+    <meta property="og:ttl" content="345600">
+    <meta property="og:image" content="http://nuz.dryrun.dev/sample/images/og_image.png">
+    <meta property="twitter:image" content="http://nuz.dryrun.dev/sample/images/og_image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:title" content="shareTitle">
+    <meta property="twitter:title" content="shareTitle">
+    <meta property="og:description" content="share description">
+    <meta property="twitter:card" content="share description">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="/sample/manifest.json">
+    <link rel="apple-touch-icon" href="/sample/images/manifest/ic_ios.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="${__APP_NAME__}">
+    <link rel="stylesheet" href="css/tiny-slider.css">
+    <style type="text/css">
+      .main-contentainer {
+          height: 100vh;
+          padding: 40vh 0;
+          background: #EEEEEE;
+      }
+      #btn {
+          background-color: #7AC9C4;
+      }
+      #btn[disabled] {
+          background-color: #AAA;
+      }
+      #count-text {
+          margin-left: 10px;
+      }
+      .wording {
+          display: none;
+      }
+      .spin {
+          margin: 5px;
+          width: 2rem;
+          height: 2rem;
+          border-width: 0.2em;
+          display: inline-block;
+          vertical-align: text-bottom;
+          border: .25em solid ;
+          border-right-color: transparent;
+          border-radius: 50%;
+          -webkit-animation: spin .75s linear infinite;
+          animation: spin .75s linear infinite;
+      }
+      @keyframes spin {
+          from {
+              transform: rotate(0deg);
+          } to {
+              transform: rotate(360deg);
+          }
+      }
+      @media (min-width: 10px) {
+      }
+      @media (min-width: 720px) {
+      }
+    </style>
+    <script src="js/tiny-slider.js"></script><!--[if lt IE 9]>
+    <script src="tiny-slider.helper.ie8.js"></script><![endif]-->
+  </head>
+  <body>
+    <header id="top-bar">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12"><a href="./"><img class="logo" src="images/top_bar/top_bar_logo.png"></a><span class="rest"><a class="home" href="./"><img src="images/top_bar/top_bar_home.png"></a><a id="open-menu" href="javascript:void(0)"><img id="menu-toggler" src="images/top_bar/top_bar_menu.png"></a></span>
+            <div class="floating-menu toggleable" id="floating-menu">
+              <nav>
+                <ul>
+                  <li><a href="./">
+                      <div class="item">首頁</div></a></li>
+                  <li><a href="./detail.html">
+                      <div class="item">更多</div></a></li>
+                  <li><a href="./story.html#address">
+                      <div class="item"><span><span>據點資訊</span>
+                          <div class="caption">bar</div></span></div></a></li>
+                  <li><a href="./setup.html">
+                      <div class="item">設定</div></a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="floating-menu-bg toggleable" id="menu-bg"></div>
+      <script>
+        (function() {
+            var header = document.getElementById('top-bar');
+            var btnOpen = document.getElementById('open-menu');
+            var img = document.getElementById('menu-toggler');
+            var actived = false;
+        
+            var toggleFn = function() {
+                actived = !actived;
+                Array.from(header.getElementsByClassName('toggleable'))
+                    .forEach(function(dom) {
+                        if (actived) {
+                            dom.classList.add('actived');
+                        } else {
+                            dom.classList.remove('actived');
+                        }
+                    });
+        
+                img.src = actived
+                    ? 'images/top_bar/top_bar_close.png'
+                    : 'images/top_bar/top_bar_menu.png';
+            };
+        
+            btnOpen.addEventListener('click', toggleFn);
+            document.getElementById('floating-menu').addEventListener('click', toggleFn);
+        })();
+      </script>
+    </header>
+    <div class="container main-container">
+      <!-- row 1-->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="main-contentainer">
+            <div>
+              <button class="center button" id="btn"><span class="wording" id="text0">不支援 PWA</span><span class="wording" id="text1">下載中</span><span class="wording" id="text2">即將完成安裝</span><span class="wording" id="text3">按我進行安裝</span><span class="wording" id="text4">完成</span><span id="btn-text">安裝</span><span class="spin" id="loading"></span><span id="count-text" style="display: none"></span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer id="foot-bar">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12"><span class="rest">
+              <div class="fb-share-button" data-href="http://nuz.dryrun.dev/sample" data-layout="button" data-size="large" data-mobile-iframe="false"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fnuz.dryrun.dev%2Fsample&amp;src=sdkpreparse">分享</a></div></span></div>
+        </div>
+      </div>
+      <div id="fb-root"></div>
+      <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v3.2';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+      </script>
+    </footer>
+    <script src="js/control.js"></script>
+    <script>
+      window.onload = function () {
+          var data = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./);
+          var chromeVer = (data && data.length >= 2) ? parseInt(data[2], 10) : null;
+          var support = 'serviceWorker' in navigator;
+      
+          var installPromptEvent = null;
+      
+          var textNoSupport = document.getElementById('text0').innerText;
+          var textInstalling = document.getElementById('text1').innerText;
+          var textWaiting = document.getElementById('text2').innerText;
+          var textClick = document.getElementById('text3').innerText;
+          var textDone = document.getElementById('text4').innerText;
+      
+          var btn = document.getElementById('btn');
+          var btnText = document.getElementById('btn-text');
+          var countText = document.getElementById('count-text');
+          var loading = document.getElementById('loading');
+          var timeout = 35;
+      
+          if (!support) {
+              btnText.innerText = textNoSupport;
+              return;
+          }
+      
+          function installApp(e) {
+              clearCallbacks();
+              if (installPromptEvent) {
+                  installPromptEvent.prompt();
+                  installPromptEvent = null;
+              } else {
+                  btn.innerText = 'no prompt event';
+              }
+          };
+      
+          function countDown() {
+              if (timeout >= 0) {
+                  btn.disabled = true;
+                  btnText.innerText = textWaiting;
+                  countText.style.display = 'inherit';
+                  countText.innerText = "-" + timeout;
+                  timeout--;
+              } else {
+                  clearCallbacks();
+                  countText.style.display = 'none';
+                  btn.disabled = false;
+                  btn.addEventListener('click', installApp);
+                  btn.innerText = textClick;
+              }
+          }
+      
+          function register(e) {
+              btn.disabled = true;
+              btnText.innerText = textInstalling;;
+              clearCallbacks();
+      
+              loading.style.display = 'inherit';
+              navigator.serviceWorker.register('./service-worker.js');
+          }
+      
+          function clearCallbacks() {
+              clearInterval(countDown);
+              btn.disabled = true;
+              btn.removeEventListener('click', register);
+              btn.removeEventListener('click', installApp);
+          }
+      
+          loading.style.display = 'none';
+          btn.disabled = !support;
+          btn.addEventListener('click', register);
+      
+          window.addEventListener('beforeinstallprompt', function (e) {
+              installPromptEvent = e;
+              installPromptEvent.preventDefault();
+              loading.style.display = 'none';
+              btn.disabled = false;
+      
+              if (installPromptEvent.prompt) {
+                  if (chromeVer && chromeVer > 67) {
+                      timeout = 35;
+                      setInterval(countDown, 1000);
+                  } else {
+                      btnText.innerText = textDone;
+                      installPromptEvent.prompt(); // maybe firefox
+                  }
+              }
+          });
+      }
+    </script>
+  </body>
+</html>
