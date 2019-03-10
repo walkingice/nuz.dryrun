@@ -1,0 +1,23 @@
+{
+    "name": "Nuz test app",
+    "short_name": "Nuz test app",
+    "icons": [
+        {
+            "src": "images/manifest/ic.png",
+            "sizes": "48x48",
+            "type": "image/png"
+        },
+        {
+            "src": "images/manifest/ic_192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "images/manifest/ic_512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "display": "standalone",
+    "start_url": "/sample/"
+}
